@@ -15,3 +15,10 @@ print(y_x)
 }
 linear_regression()
 
+scatter_plot<-function(plot_file)
+{
+    png(file=plot_file)
+    plot(xy_data$x,xy_data$y,xlab='x',ylab='y',main='scatter point of (d)')
+    dev.off()
+}
+scatter_plot('scatter_plot_d.png')
