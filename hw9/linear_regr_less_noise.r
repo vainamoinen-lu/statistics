@@ -19,10 +19,10 @@ yx_regr=linear_regression()
 scatter_plot<-function(plot_file)
 {
     png(file=plot_file)
-    plot(xy_data$x,xy_data$y,xlab='x',ylab='y',main='scatter point of linear regression')
+    plot(xy_data$x,xy_data$y,xlab='x',ylab='y',main='scatter point of linear regression(less noise)')
     abline(yx_regr)
     abline(-1,0.5,lty=2,col='red')
     legend('topright',legend=c('sample regression','population regression'),lty=c(1,2),col=c('black','red'))
     dev.off()
 }
-scatter_plot('scatter_plot.png')
+scatter_plot('scatter_plot_less_noise.png')
